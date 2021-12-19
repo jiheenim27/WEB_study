@@ -1,0 +1,85 @@
+<!DOCTYPE html> <!--해당 문서를 브라우저가 다르게 랜더링 하지 않도록 하기 위해 HTML 문서임을 알려주는 특수한 태그-->
+<html lang=ko"> <!--문서 언어 설정-->
+<head> <!--head: html 문서 전체를 대표하거나, html문서 전체에서 필요한 데이터를 넣음-->
+    <meta charset="UTF-8"> <!--문자 인코딩 설정-->
+    <meta name="description" content="HTML 문서에 대한 설명">
+    <meta name="keywords" content="HTML, CSS, JAVASCRIPT">
+    <meta name="author" content="Jihee Shin">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--호환성 관련 태그. IE에서 최신 표준 모드로 랜더링되도록 설정-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, 
+    initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!--viewport: 현재 화면에서 보여지고 있는 직사각형 영역, 웹 브라우저 상에서는 현재 창에서 문서를 볼 수 있는 전체 화면을 의미-->
+    <!--width: 초기 뷰포트 너비 설정, user-scalable: 웹페이지 확대 허용 여부 설정, initial-scale: 디바이스 너비와 뷰포트 너비 비율 설정,
+    maximum-scale: 최대 확대 비율 설정, minimum-scale: 최소 확대 비율 설정-->
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"> <!--html문서에 필요한 외부 데이터를 가져오기 위해 사용. 주로 css 파일과 아이콘 파일-->
+    <!--rel: html문서와 외부 데이터와의 관계 표시, href: 외부 데이터 파일 위치 설정-->
+    <style></style> <!--css코드를 html 문서 내에서 작성할 때 사용-->
+    <script></script> <!--js 코드를 html 문서 내에서 작성할 때 사용-->
+    <script src="_"></script>
+</head>
+<body>
+    <h1>제목 태그</h1>
+    <h6>현업에서는 웹브라우저 호환성을 위해, 태그에 표현 서식이 들어있는 경우는 모두 삭제하고 css style을 별도로 적용함</h6>
+    <p>문단을 표시하는 태그</p>
+    <a href="" target="_blank">하이퍼링크를 설정하는 태그</a>
+    <!--href: 하이퍼링크 url, target: 링크된 url 이동 방법 지정. _self & _blank-->
+
+    <ol></ol> <!--순서 있는 리스트-->
+    <ul></ul> <!--순서 없는 리스트-->
+    <li></li> <!--리스트 item-->
+
+    <img src="" alt=""> <!--이미지 삽입 태그. src: 이미지 파일 위치, alt: 이미지 대체 텍스트-->
+    <div>division. html 문서의 특정 부분을 지정하는데 사용</div>
+
+    <table border="1"> <!--표 구현을 위한 태그-->
+        <!--thead나 tfoot은 표에서 한 번도 안나오거나, 한 번만 나와야 함. tfoot는 thead보다 뒤에 위치해야 함.-->
+        <thead>
+            <tr>
+                <th colspan="2">제목 열. 열 확장</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">행 확장</td><td>내용 열2</td>
+            </tr>
+            <tr>
+                <td>내용 열3</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>마지막 열</td><td>마지막 열2</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <form action="" method="" target=""></form> <!--사용자가 입력을 받는 태그로 input 태그 등과 같이 사용됨-->
+    <!--action: 사용자 입력 받은 데이터를 처리할 url, method: HTTP method(post&get), target: 링크된 url 이동 방법 지정-->
+
+    <input type=""> <!--사용자 데이터를 입력받는 주요 태그. type: 사용자 입력 받는 인터페이스 설정(button, checkbox, ...)-->
+    <!--input type별 샘플 코드 참조 블로그: https://j9in6.tistory.com/7 -->
+
+    <h3>Semantic Web</h3>
+    웹페이지 각 요소에 의미를 부여해서, 단순 키워드 중심 검색을 뛰어넘어 '의미'와 '관련성'을 기반으로 보다 진보된 검색 또는 서비스가 가능토록 하는 시도
+    <header></header>
+    <nav></nav>
+    <aside></aside>
+    <section></section> <!--본문의 여러 내용(article)을 포함하는 부분을 의미-->
+    <article></article>
+    <footer></footer>
+
+    <!--웹 접근성: 환경적 제한이 있는 사용자(고령자 또는 장애인)를 고려하여 웹페이지를 작성하는 기법. ex)img태그에 alt속성 넣기, 키보드로 웹페이지 인터페이스 접근 가능..-->
+
+    <h3>이미지</h3>
+    이미지는 비트맵과 벡터 이미지로 구분됨. <br>
+    비트맵: 픽셀 단위로 색 정보를 가진 이미지 데이터 (.jpeg, .jpg, .gif, .png). 정교하고 다양한 색상으로 이미지 표현 가능. but 이미지 확대 또는 축소 시 이미지 깨짐 <br>
+    벡터 이미지: 수학 정보로 모양을 가진 이미지 데이터 (.svg). 이미지 확대 또는 축소 시 이미지 깨지지 않음 <br><br>
+
+    JPEG(JPG) -> 높은 압축률. 24bit. 고해상도 이미지 가능. 이미지 품질과 용량 조정 가능. 손실 압축<br>
+    GIF -> 동영상, 짤과 같은 이미지 가능. 8bit 색상만 지원. 비손실 압축<br>
+    PNG -> 투명도 지원되는 GIF 대체 포맷. W3C 권장 이미지 포맷. 동영상 지원 X, 24bit로 고해상도 이미지 가능, 비손실 압축<br>
+    WEBP -> 동영상, 투명도 지원되는 JPG, PNG, GIF 모두 대체하는 포맷. 구글에서 개발, 일부 브라우저 미지원, 손실/비손실 압축 모두 지원
+    
+</body>
+</html>
