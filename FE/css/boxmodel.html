@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      div {
+        /* 배경색 지정: content 와 padding 영역에 적용 */
+        background-color: orange;
+        /* 디폴트로 content 영역 너비, box-sizing 프로퍼티를 통해 변경 가능 */
+        width: 300px;
+        /* 패딩 영역 두께 */
+        padding: 20px;
+        /* 테두리: 두께 형태 색상 (테두리는 색상도 지정 가능) */
+        border: 10px solid yellow;
+        /* 마진 영역 두께 */
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>css boxmodel</div>
+    <p>
+        box-sizing 프로퍼티는 디폴트로 content-box가 지정되어 있음. 이 경우, width/height는 content 영역의 너비와 높이가 됨. <br>
+        <b>box-sizing</b> 프로퍼티가 <b>border-box</b>로 지정되어 있으면, content + padding + border 영역의 너비와 높이가 됨. (margin은 제외)<br>
+        컨텐트가 지정된 width/height를 넘치면 content 영역 밖으로 넘칠 수 잇는데. overflow 속성을 hidden으로 설정하면 넘친 컨텐츠는 감출 수 있음.
+        <br><br>
+        block 특성을 가진 요소에 대한 중앙 정렬 방법 -> margin-left와 margin-right를 auto로 설정해준다. <br>
+    </p>
+  </body>
+</html>
