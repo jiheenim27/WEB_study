@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 단위정리</title>
+    <style>
+        .test { color: blue; font-weight: 800;}
+        html { font-size: 16px;}
+        span.em { font-size: 2em;}
+        span.rem { font-size: 2rem;}
+
+        .box1 { background-color: blue; width: 40vw; height: 20vw;}
+        .box2 { background-color: red; width: 40vw; height: 20vw;}
+    </style>
+</head>
+<body>
+    <div>
+        <b>1.px</b> <br>
+        픽셀(회소)단위, 해상도에 따라 상대적인 크기를 가짐. <br>
+        <b>2. % (퍼센트)</b> <br>
+        백분율 단위의 상대 단위, 지정 사이즈를 기반으로 상대적인 비율의 크기를 가짐. <br>
+        <b>3. em</b> <br>
+        배수 단위, 지정 사이즈를 기반으로 배수로 계산된 크기를 가짐. <br>
+        중첩된 자식 요소에 em을 지정하면 모든 자식 요소 사이즈에 영향을 주므로 주의해야 함. <br>
+        <b>4. rem</b> <br>
+        em과 달리 rem은 root em으로, 최상위 요소(html) 사이즈를 기준으로 함.
+        <hr>
+        <span class="test">test</span> <br>
+        기본 사이즈 
+        <span class="em">
+            <span class="em">중첩1</span> <span class="em">중첩2</span>
+        </span>
+        <br>
+        기본 사이즈
+        <span class="rem">
+            <span class="rem">중첩1</span> <span class="rem">중첩2</span>
+        </span>
+    </div> <hr><br>
+    <div>
+        반응형 viewport 단위 <br>
+        viewport : 웹브라우저에서 웹페이지가 표시되는 영역을 의미 <br>
+        <b>1. vw</b> : viewport 너비의 1/100 (1%)<br>
+        <b>2. vh</b> : viewport 높이의 1/100 (1%) <br>
+        <b>3. vmin</b> : viewport 너비 또는 높이 중 작은 쪽의 1/100 (1%) <br>
+        <b>4. vmax</b> : viewport 너비 또는 높이 중 큰 쪽의 1/100 (1%)
+        <hr>
+        <span class="test">test</span>
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+    </div><hr><br>
+    <div>
+        색상 표현 단위 <br>
+        <b>1. 색상 이름으로 표기하는 방법</b> <br>
+        <b>2. 16진수 표기 방법</b> ex) #ffffff <br>
+        <b>3. RGB 표기 방법</b> ex) rgb(138, 43, 226) <br>
+        <b>4. RGBA 표기 방법</b> ex) rgba(138, 43, 226, 0.5) <br> <br>
+
+        참고 <br>
+        opacity 프로퍼티: 투명도 설정, 0.0이 완전 투명, 1.0이 완전 불투명 <br>
+        opacity 프로퍼티 값은 모든 자식 요소에 상속되나, RGBA로 설정하면 상속되지 않음.
+    </div>
+</body>
+</html>
